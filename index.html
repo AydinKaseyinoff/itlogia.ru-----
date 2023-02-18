@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Аренда премиальных автомобилей</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="/image/logo.png" alt="logo">
+        <img src="image/logo.png" alt="logo">
       </div>
       <nav class="menu">
         <ul>
@@ -38,7 +38,7 @@
           В нашем клубе имеется солидная коллекция спортивных автомобилей — от достаточно распространенных серийных машин до настоящего гоночного эксклюзива. Воспользуйтесь уникальной возможностью побывать за рулем настоящей легенды и узнать, на что она способна за пределами гоночной трассы!
         </div>
         <div class="main-action">
-          <button class="button">Посмотреть автомобили</button>
+          <button class="button" id="main-action">Посмотреть автомобили</button>
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -130,7 +130,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -158,7 +158,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -186,7 +186,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -214,7 +214,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -242,7 +242,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -270,7 +270,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
         <div class="car-item">
@@ -298,7 +298,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button">Забронировать</button>
+            <button class="button car-button">Забронировать</button>
           </div>
         </div>
       </div>
@@ -313,10 +313,10 @@
         Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования
       </div>
       <form action="" class="price-form">
-        <input type="text" placeholder="Ваше имя" class="price-input">
-        <input type="text" placeholder="Ваш телефон" class="price-input">
-        <input type="text" placeholder="Автомобиль, который вас интересует" class="price-input">
-        <button class="button">Узнать цену</button>
+        <input type="text" placeholder="Ваше имя" class="price-input" id="name">
+        <input type="text" placeholder="Ваш телефон" class="price-input" id="phone">
+        <input type="text" placeholder="Автомобиль, который вас интересует" class="price-input" id="car">
+        <button class="button" id="price-action">Узнать цену</button>
       </form>
       <img src="/image/rolls.png" alt="" class="price-image">
     </div>

@@ -1,16 +1,34 @@
-// Найти все ссылки начинающиеся на #
-const anchors = document.querySelectorAll('a[href^="#"]')
+document.getElementById("main-action").onclick = function () {
+  document.getElementById("cars").scrollIntoView({ behavior: "smooth" });
+};
 
-// Цикл по всем ссылкам
-for(let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault() // Предотвратить стандартное поведение ссылок
-    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-    // Плавная прокрутка до элемента с id = href у ссылки
-    document.querySelector(goto).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
+var buttons = document.getElementsByClassName("car-button");
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    document.getElementById("price").scrollIntoView({ behavior: "smooth" });
+  };
 }
+
+document.getElementById("price-action").onclick = function () {
+  if (document.getElementById("name").value === "") {
+    alert("Заполните поле имя!");
+  } else if (document.getElementById("phone").value === "") {
+    alert("Заполните поле телефон!");
+  } else if (document.getElementById("car").value === "") {
+    alert("Заполните поле автомобиль!");
+  } else {
+    alert("Спасибо за заявку. Мы свяжемся с вами в ближайшее время");
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    let layer = document.querySelector('.price-image');
+document.addEventListener('mousemove', (event) => {
+        layer.style.transform = 'translate3d(' + ((event.clientX * 0.3) / 8) + 'px,' + ((event.clientY * 0.4) / 10) + 'px,0px)';
+});
+
+    const elem = document.querySelector(".main");
+document.addEventListener('scroll', () => {
+        elem.style.backgroundPositionX = '0' + (0.3 * window.pageYOffset) + 'px';
+})
+});
